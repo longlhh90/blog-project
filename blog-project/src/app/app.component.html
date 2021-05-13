@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="toolbar-spacer">
+  <button mat-icon-button routerLink="">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <div class="toolbar-item-container">
+    <button mat-button routerLink="blogs">BLOG</button>
+    <button mat-button>ABOUT</button>
+    <button mat-button>NEWSLETTER</button>
+    <button mat-icon-button >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+
+<div class="container">
+  <!-- <mat-card class="profile">
+    <mat-card-header>
+      <mat-card-title>Mr. X</mat-card-title>
+      <mat-card-subtitle>Profile</mat-card-subtitle>
+    </mat-card-header>
+    <div mat-card-avatar class="avatar-image"></div>
+    <mat-card-content>
+      Profile:
+      <ul>
+        <li *ngFor="let item of profile_list"> {{item}}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Contact me</button>
+    </mat-card-actions>
+  </mat-card> -->
+
+  <router-outlet></router-outlet>
+  
+</div>
