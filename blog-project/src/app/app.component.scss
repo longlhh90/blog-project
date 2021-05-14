@@ -9,24 +9,4 @@
     margin-right: 50px;
 }
 
-.container {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.profile {
-    max-height: 400px;
-    margin: 20px;
-}
-
-.avatar-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-    border-radius: 15px 50px;
-    border: 2px solid red;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-}

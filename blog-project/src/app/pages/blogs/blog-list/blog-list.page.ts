@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   templateUrl: 'blog-list.page.html',
@@ -9,5 +10,15 @@ export class BlogListPage {
 
     ngOnInit() {
 
+    }
+
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router,
+    ) {}
+
+    goToDetail(id: number) {
+        console.log(id);
+        this.router.navigate([id], { relativeTo: this.route });
     }
 }
