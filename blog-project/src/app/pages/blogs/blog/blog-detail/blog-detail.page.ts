@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class BlogDetailPage {
     blogs = [1,2,3,4,5];
-    blogID$ : Observable<string>
+    blogID$ : Observable<string>;
 
     constructor(
       private route: ActivatedRoute,

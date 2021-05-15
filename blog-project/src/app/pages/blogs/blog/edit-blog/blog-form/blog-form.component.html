@@ -1,0 +1,24 @@
+<form class="standard-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <mat-form-field appearance="fill">
+        <mat-label>Blog Title</mat-label>
+        <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Blog Picture URL</mat-label>
+        <input matInput formControlName="imgUrl">
+    </mat-form-field>
+    <div style="display:flex; justify-content: center; margin: 16px;">
+        <img style="width: calc(50% + 32px);" mat-card-image
+            src={{blog.imgUrl}}
+            alt="">
+    </div>
+      
+    <div style="margin-bottom: 16px;">
+        <quill-editor [styles]="{height: '500px'}" formControlName="content"></quill-editor>
+    </div>
+
+    <div class="action">
+        <button mat-raised-button color="primary">Submit</button>
+    </div>
+</form>
+
