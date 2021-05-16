@@ -4,52 +4,21 @@
         <div class="item-container">
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>New Blog about Shiba Inu {{blogID$ | async}}</mat-card-title>
+                    <mat-card-title>{{blog.title}} {{blogID$ | async}}</mat-card-title>
                     <mat-card-subtitle>Jan 14, 2021</mat-card-subtitle>
                 </mat-card-header>
                 <div style="display:flex; justify-content: center; padding: 16px;">
                     <img style="width: calc(50% + 32px);" mat-card-image
                         src="https://placedog.net/100{{blogID$ | async}}/100{{blogID$ | async}}?random"
-                        alt="Photo of a Shiba Inu">
+                        alt="blog.title">
                 </div>
                 <hr>
                 <mat-card-content>
-                    <div>
-                        <!-- The Shiba Inu {{blogID$ | async}} is the smallest of the six original and distinct spitz breeds
-                        of dog
-                        from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged.
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                        passages, and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum. -->
-                        <h2>Header 1</h2>
-                        <p>The Shiba Inu is the smallest of th<span style="color: rgb(230, 0, 0);">e six original and
-                                distinct spitz </span>breeds of dog from Japan. A small, agile dog that copes very well
-                            with
-                            mountainous terrain, the Shiba Inu was originally bred for hunting. Lorem Ipsum is simply
-                            dummy
-                            text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                            dummy text ever since the 1500s, </p>
-                        <ol>
-                            <li>when an unknown printer took a galley of type and scrambled it to make a type specimen
-                                book.
-                                It has survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s</li>
-                            <li> with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                                with
-                                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
-                        </ol>
-                    
-                    </div>
+                    <quill-view [content]="blog.content" format="html" theme="snow"></quill-view>
                 </mat-card-content>
                 <mat-card-actions style="display: flex; justify-content: flex-end;">
-                    <button mat-button>SHARE</button>
+                    <button mat-icon-button><mat-icon>share</mat-icon></button>
+                    <button mat-icon-button *ngIf="isAdmin" routerLink="edit"><mat-icon>edit</mat-icon></button>
                 </mat-card-actions>
             </mat-card>
         </div>
@@ -61,7 +30,7 @@
             <mat-card>
                 <mat-card>
                     <mat-card-header style="margin-bottom: 15px;">
-                        <mat-card-title>Write a comment</mat-card-title>
+                        <mat-card-title>Leave a comment</mat-card-title>
                     </mat-card-header>
 
                     <!-- Comment Form -->

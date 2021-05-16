@@ -16,9 +16,10 @@
                         bred for hunting...
                     </p>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="goToDetail(i)">Continue reading</button>
-                    <button mat-button>SHARE</button>
+                <mat-card-actions style="display: flex; justify-content: flex-end; width: 100%;">
+                    <button mat-button (click)="goToDetail(i)" style="margin-right: auto;">Continue reading</button>
+                    <button mat-icon-button><mat-icon>share</mat-icon></button>
+                    <button mat-icon-button *ngIf="isAdmin" [routerLink]="[i, 'edit']"><mat-icon>edit</mat-icon></button>
                 </mat-card-actions>
             </mat-card>
         </div>

@@ -12,7 +12,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { BlogEditComponent } from './blog/edit-blog/blog-edit.page';
 import { BlogFormComponent } from './blog/edit-blog/blog-form/blog-form.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
